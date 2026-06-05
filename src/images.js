@@ -9,10 +9,17 @@ import manifest from './images.json';
 
 const norm = (s) => (s || '').toLowerCase().replace(/\s+/g, '').trim();
 
+// Manifest URLs are root-absolute (e.g. "/clickeez/foo.png"). On GitHub Pages the
+// app is served under a subpath (BASE_URL = "/clickeez-lookup/"), so we must prefix
+// them with the base or the browser 404s. BASE_URL has a trailing slash, the manifest
+// path has a leading slash — strip one to avoid "//".
+const withBase = (url) =>
+  import.meta.env.BASE_URL.replace(/\/$/, '') + url;
+
 // Pre-build a normalized lookup so minor casing/spacing differences still match.
 const NORM_MAP = {};
 for (const [name, url] of Object.entries(manifest)) {
-  NORM_MAP[norm(name)] = { name, url };
+  NORM_MAP[norm(name)] = { name, url: withBase(url) };
 }
 
 /** Split a hidden/visible field into individual character tokens. */
