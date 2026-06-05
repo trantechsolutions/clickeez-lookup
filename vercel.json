@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/sheet/:path*",
+      "destination": "https://docs.google.com/:path*"
+    }
+  ]
+}
