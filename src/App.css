@@ -328,7 +328,249 @@ body {
 }
 .disclaimer strong { color: var(--pink-ink); }
 
+/* View toggle: Lookup ⇄ Collection */
+.view-tabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.view-tab {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 999px;
+  padding: 9px 20px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.view-tab:hover { color: var(--text); }
+.view-tab.active {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(90deg, var(--pink-ink), var(--lavender-ink));
+  box-shadow: 0 8px 20px rgba(169, 143, 208, 0.28);
+}
+
+/* ============================================================
+   Collection checklist — mimics the Series 1 Collector's Guide scansheet
+   ============================================================ */
+.collection { margin-top: 8px; }
+
+/* Rainbow banner echoing the poster header + "COLLECT THEM ALL!" */
+.cz-banner {
+  position: relative;
+  border-radius: 20px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+  background:
+    linear-gradient(95deg,
+      rgba(244, 154, 194, 0.9) 0%,
+      rgba(246, 217, 129, 0.9) 30%,
+      rgba(159, 227, 197, 0.9) 55%,
+      rgba(127, 212, 232, 0.9) 78%,
+      rgba(169, 143, 208, 0.9) 100%);
+  box-shadow: 0 14px 34px rgba(169, 143, 208, 0.28);
+  color: #4a3b5e;
+}
+.cz-banner-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cz-series {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+.cz-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(124, 95, 174, 0.35);
+}
+.cz-counter {
+  font-family: var(--font-display);
+  font-size: 17px;
+  margin-top: 8px;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(124, 95, 174, 0.3);
+}
+.cz-counter strong { font-size: 22px; }
+.cz-progress {
+  margin-top: 8px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  overflow: hidden;
+}
+.cz-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pink-ink), var(--lavender-ink));
+  transition: width 0.25s ease;
+}
+.cz-reset {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--lavender-ink);
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 5px 14px;
+  cursor: pointer;
+  transition: filter 0.15s, opacity 0.15s;
+}
+.cz-reset:hover:not(:disabled) { filter: brightness(1.05); }
+.cz-reset:disabled { opacity: 0.4; cursor: default; }
+
+/* Themed block — one per scansheet section, washed with its accent color */
+.cz-block {
+  border-radius: 18px;
+  padding: 16px 18px 20px;
+  margin-bottom: 18px;
+  border: 1px solid color-mix(in srgb, var(--block) 45%, var(--border));
+  background:
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--block) 26%, #fff) 0%,
+      color-mix(in srgb, var(--block) 12%, #fff) 100%);
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--block) 22%, transparent);
+}
+.cz-block-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.cz-block-head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: color-mix(in srgb, var(--block) 70%, #2e2640);
+}
+.cz-block-count {
+  font-size: 12px;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--block) 60%, #2e2640);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.cz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+  gap: 12px;
+}
+
+/* A single collectible cell — the whole tile is the toggle button */
+.cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 6px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+  cursor: pointer;
+  font: inherit;
+  text-align: center;
+  transition: transform 0.1s, box-shadow 0.15s, background 0.15s;
+}
+.cell:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(169, 143, 208, 0.22); }
+.cell:active { transform: translateY(0); }
+.cell.owned {
+  background: #fff;
+  border-color: color-mix(in srgb, var(--block) 60%, #fff);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--block) 28%, transparent);
+}
+
+/* ○ / ● check circle — the scansheet's own furniture, now interactive */
+.check {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--block) 55%, #b3a9c4);
+  background: rgba(255, 255, 255, 0.9);
+  transition: background 0.15s, border-color 0.15s;
+}
+.cell.owned .check {
+  border-color: color-mix(in srgb, var(--block) 70%, #2e2640);
+  background:
+    color-mix(in srgb, var(--block) 80%, #fff)
+    radial-gradient(circle at 50% 50%, transparent 0 1px, transparent 1px);
+}
+.cell.owned .check::after {
+  content: '✓';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.cell-face {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--panel-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(0.55) opacity(0.7);
+  transition: filter 0.2s;
+}
+.cell.owned .cell-face { filter: none; }
+.cell-face img { width: 100%; height: 100%; object-fit: cover; }
+.cell-face-missing {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--muted);
+}
+.cell-name {
+  font-size: 10.5px;
+  line-height: 1.2;
+  color: #5a4f70;
+  word-break: break-word;
+}
+.cell.owned .cell-name { font-weight: 700; color: #2e2640; }
+
+.cz-foot {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 18px 0 0;
+}
+
 @media (max-width: 560px) {
   .panel { grid-template-columns: 1fr; }
   .actions { flex-direction: column; }
+  .cz-grid { grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); }
+  .cz-title { font-size: 22px; }
 }

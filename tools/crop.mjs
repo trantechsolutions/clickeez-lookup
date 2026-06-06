@@ -29,17 +29,25 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 const meta = await sharp(SRC).metadata();
 const clamp = (v, max) => Math.max(0, Math.min(v, max));
 
-const manifest = {}; // dataName -> "/clickeez/<slug>.png"
+// MERGE into the existing manifest rather than overwrite. FACES holds only the
+// blocks we are (re)calibrating; the strawberry/garden crops the user confirmed
+// good are NOT in FACES, so leaving the manifest intact preserves their keys and
+// their PNGs are never touched. Only re-run crop on the broken blocks.
+const MANIFEST_PATH = 'src/images.json';
+const manifest = fs.existsSync(MANIFEST_PATH)
+  ? JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'))
+  : {};
 let count = 0;
 
 for (const f of FACES) {
   const dataName = LABEL_TO_DATA[f.name] || f.name;
   const file = slug(dataName) + '.png';
-  const left = clamp(Math.round(f.x - half), meta.width - BOX);
-  const top = clamp(Math.round(f.y - half), meta.height - BOX);
+  const box = f.box || BOX; // per-face box override (side columns may differ)
+  const left = clamp(Math.round(f.x - box / 2), meta.width - box);
+  const top = clamp(Math.round(f.y - box / 2), meta.height - box);
 
   await sharp(SRC)
-    .extract({ left, top, width: BOX, height: BOX })
+    .extract({ left, top, width: box, height: box })
     .resize(220, 220)
     .png()
     .toFile(path.join(OUT_DIR, file));
@@ -48,6 +56,6 @@ for (const f of FACES) {
   count++;
 }
 
-fs.writeFileSync('src/images.json', JSON.stringify(manifest, null, 2));
+fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2));
 console.log(`Cropped ${count} faces -> ${OUT_DIR}`);
-console.log(`Manifest: src/images.json (${Object.keys(manifest).length} keys)`);
+console.log(`Manifest: ${MANIFEST_PATH} (${Object.keys(manifest).length} keys total)`);

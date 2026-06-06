@@ -1,0 +1,20 @@
+# Files excluded from the Vercel deployment upload.
+# These stay in git (source/history) but the deployed Vite build does not need
+# them — nothing under src/ imports any of these (verified).
+
+# Dev tooling: crop pipeline, source guide scans, debug contact sheets
+tools/
+
+# Project docs
+docs/
+
+# Data prep: the app ships a bundled snapshot (src/dataSource.js); the raw CSV
+# and its parser are dev-only
+clickeez.csv
+parse.cjs
+
+# Repo meta / lint config / personal scratch — not used by `vite build`
+.github/
+README.md
+eslint.config.js
+owned

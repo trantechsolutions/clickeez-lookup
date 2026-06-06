@@ -22,3 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Env & deploy
+.env
+.env.*
+.vercel
+.eslintcache
+
+# Personal owned-list scratch file (the app persists the collection in
+# localStorage via useOwnedCollection.js — this root file is not used at runtime)
+owned
+
+# Generated calibration/debug contact sheets (regenerate via tools/*.mjs)
+tools/_*.png

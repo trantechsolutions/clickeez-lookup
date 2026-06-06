@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState, useCallback } from 'react';
 import { lookup, rarityMeta } from './lookup';
 import { fetchLiveData, SNAPSHOT } from './dataSource';
 import { imagesForField } from './images';
+import CollectionView from './CollectionView';
 import './App.css';
 
 function FaceThumb({ token, image, color }) {
@@ -100,6 +101,7 @@ export default function App() {
   const [dataset, setDataset] = useState({ ...SNAPSHOT, source: 'snapshot', fetchedAt: null });
   const [loading, setLoading] = useState(true);
 
+  const [view, setView] = useState('lookup');
   const [visible, setVisible] = useState('');
   const [batch, setBatch] = useState('');
   const [submitted, setSubmitted] = useState(null);
@@ -139,6 +141,29 @@ export default function App() {
 
   return (
     <div className="app">
+      <nav className="view-tabs">
+        <button
+          type="button"
+          className={'view-tab' + (view === 'lookup' ? ' active' : '')}
+          onClick={() => setView('lookup')}
+          aria-pressed={view === 'lookup'}
+        >
+          🔍 Lookup
+        </button>
+        <button
+          type="button"
+          className={'view-tab' + (view === 'collection' ? ' active' : '')}
+          onClick={() => setView('collection')}
+          aria-pressed={view === 'collection'}
+        >
+          ✓ My Collection
+        </button>
+      </nav>
+
+      {view === 'collection' && <CollectionView />}
+
+      {view === 'lookup' && (
+      <>
       <header className="hero">
         <div className="logo">🫧 Clickeez Lookup</div>
         <p className="tagline">
@@ -224,6 +249,8 @@ export default function App() {
             Limited Editions appear at random. Treat results as <em>possibilities</em>, not guarantees.
           </div>
         </section>
+      )}
+      </>
       )}
     </div>
   );
