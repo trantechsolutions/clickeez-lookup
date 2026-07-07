@@ -8,15 +8,6 @@ export default defineConfig({
   // leading-slash base would also be fine.)
   base: '/clickeez-lookup/',
   plugins: [react()],
-  server: {
-    // Google's CSV export sends no CORS headers, so the browser can't fetch it
-    // cross-origin. In dev we proxy /sheet/* -> docs.google.com to dodge CORS.
-    proxy: {
-      '/sheet': {
-        target: 'https://docs.google.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/sheet/, ''),
-      },
-    },
-  },
+  // No dev proxy needed: the app fetches Google's gviz CSV endpoint directly,
+  // which sends CORS headers (see src/dataSource.js).
 })

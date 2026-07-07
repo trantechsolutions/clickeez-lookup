@@ -1,16 +1,17 @@
 import snapshot from './data.json';
 import { transformCsv } from './parseCsv';
 
-// The spreadsheet's public CSV export. Google does NOT send CORS headers on this
-// endpoint, so a browser can't fetch it directly cross-origin — we go through a proxy:
-//   - dev:  Vite proxies /sheet -> docs.google.com (see vite.config.js)
-//   - prod: set VITE_SHEET_URL to your own proxy (e.g. a serverless function / Vercel rewrite)
+// The spreadsheet's public CSV, via Google's gviz endpoint. Unlike the /export
+// endpoint (which 307-redirects to a signed googleusercontent.com URL that drops
+// CORS headers), gviz responds 200 directly WITH `Access-Control-Allow-Origin`,
+// so the browser can fetch it cross-origin from any static host (GitHub Pages,
+// Vercel, dev) — no proxy needed. Override with VITE_SHEET_URL if desired.
 const SHEET_ID = '1Fgra5SB-SL7g916c8yYVuxYlH0tLJpl3-6REZd1fmwA';
 const GID = '0';
 
 const SHEET_URL =
   import.meta.env.VITE_SHEET_URL ||
-  `/sheet/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${GID}`;
+  `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${GID}`;
 
 export const SNAPSHOT = snapshot;
 
