@@ -11,16 +11,18 @@ const norm = (s) => (s || '').toLowerCase().replace(/\s+/g, '').trim();
  * @param {Array}  entries  the dataset to search (live or snapshot)
  * @param {string} visible  visible character name (required)
  * @param {string} [batch]  batch code like "YH1505" (optional)
+ * @param {string} [series] restrict to one series, e.g. "Series 3" (empty = all)
  * @returns {{ matches: Array, hasBatch: boolean }}
  */
-export function lookup(entries, visible, batch) {
+export function lookup(entries, visible, batch, series) {
   const v = norm(visible);
   if (!v) return { matches: [], hasBatch: false };
 
   const b = norm(batch);
   const hasBatch = !!b;
 
-  const hits = entries.filter((e) => e.visible.some((name) => norm(name) === v));
+  const inSeries = series ? (e) => e.series === series : () => true;
+  const hits = entries.filter((e) => inSeries(e) && e.visible.some((name) => norm(name) === v));
 
   const matches = hits.map((e) => {
     const batchMatch = hasBatch && e.batchCodes.some((c) => norm(c) === b);

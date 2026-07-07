@@ -11,7 +11,7 @@ function FaceThumb({ token, image, color }) {
       {image ? (
         <img src={image.url} alt={token} loading="lazy" />
       ) : (
-        <div className="face-placeholder" style={{ '--rarity': color }} title="No image (Series 2)">?</div>
+        <div className="face-placeholder" style={{ '--rarity': color }} title="No image yet">?</div>
       )}
       <figcaption>{token}</figcaption>
     </figure>
@@ -104,6 +104,7 @@ export default function App() {
   const [view, setView] = useState('lookup');
   const [visible, setVisible] = useState('');
   const [batch, setBatch] = useState('');
+  const [series, setSeries] = useState(''); // '' = all series
   const [submitted, setSubmitted] = useState(null);
 
   const refresh = useCallback(async (signal) => {
@@ -120,10 +121,34 @@ export default function App() {
     return () => ctrl.abort();
   }, [refresh]);
 
+  // Series present in the data, natural-sorted (Series 1, 2, 3…).
+  const seriesList = useMemo(
+    () => [...new Set(dataset.data.map((d) => d.series).filter(Boolean))].sort(),
+    [dataset],
+  );
+
+  // Visible-name suggestions, narrowed to the selected series when one is active.
+  const visibleOptions = useMemo(() => {
+    if (!series) return dataset.visibles;
+    const set = new Set();
+    dataset.data.forEach((d) => {
+      if (d.series !== series) return;
+      d.visible.forEach((v) => { if (v && !/^(N\/A|Unknown|not entirely)/i.test(v)) set.add(v); });
+    });
+    return [...set].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  }, [dataset, series]);
+
+  // Result refilters live when the series scope changes, not just on submit.
   const result = useMemo(() => {
     if (!submitted) return null;
-    return lookup(dataset.data, submitted.visible, submitted.batch);
-  }, [submitted, dataset]);
+    return lookup(dataset.data, submitted.visible, submitted.batch, series);
+  }, [submitted, dataset, series]);
+
+  // When a series filter hides an otherwise-known visible, offer to widen the scope.
+  const foundInOtherSeries = useMemo(() => {
+    if (!submitted || !series || (result && result.matches.length > 0)) return false;
+    return lookup(dataset.data, submitted.visible, submitted.batch, '').matches.length > 0;
+  }, [submitted, dataset, series, result]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -170,11 +195,28 @@ export default function App() {
           Enter the <strong>visible</strong> Clickeez and your <strong>batch code</strong> to find the
           possible hidden Clickeez inside.
         </p>
-        <span className="region-pill">🇺🇸 US assortments · Series 1 &amp; 2</span>
+        <span className="region-pill">🇺🇸 US assortments · Series 1–3</span>
         <DataStatus dataset={dataset} loading={loading} onRefresh={() => refresh()} />
       </header>
 
       <form className="panel" onSubmit={onSubmit}>
+        <div className="field">
+          <label>Series</label>
+          <div className="seg" role="group" aria-label="Filter by series">
+            {['', ...seriesList].map((s) => (
+              <button
+                key={s || 'all'}
+                type="button"
+                className={'seg-btn' + (series === s ? ' active' : '')}
+                onClick={() => setSeries(s)}
+                aria-pressed={series === s}
+              >
+                {s || 'All'}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <div className="field">
           <label htmlFor="visible">Visible Clickeez <span className="req">*</span></label>
           <input
@@ -186,7 +228,7 @@ export default function App() {
             autoComplete="off"
           />
           <datalist id="visibles">
-            {dataset.visibles.map((v) => <option key={v} value={v} />)}
+            {visibleOptions.map((v) => <option key={v} value={v} />)}
           </datalist>
         </div>
 
@@ -217,10 +259,19 @@ export default function App() {
             <div className="empty">
               <h3>No matches found</h3>
               <p>
-                No documented pattern for <strong>“{submitted.visible}”</strong>. Check the spelling —
+                No documented pattern for <strong>“{submitted.visible}”</strong>
+                {series ? <> in <strong>{series}</strong></> : null}. Check the spelling —
                 names are exact (including symbols like <code>.x</code>, <code>!!</code>, <code>&lt;3</code>),
                 or pick one from the suggestions.
               </p>
+              {foundInOtherSeries && (
+                <p className="empty-hint">
+                  It’s documented in another series though —{' '}
+                  <button type="button" className="link-btn" onClick={() => setSeries('')}>
+                    search All series
+                  </button>.
+                </p>
+              )}
             </div>
           ) : (
             <>

@@ -136,6 +136,37 @@ body {
   border-color: var(--brand-lavender);
   box-shadow: 0 0 0 3px rgba(169, 143, 208, 0.28);
 }
+/* Segmented series filter */
+.seg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.seg-btn {
+  flex: 1 1 auto;
+  min-width: 64px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+.seg-btn:hover { color: var(--text); }
+.seg-btn.active {
+  background: #fff;
+  color: var(--lavender-ink);
+  box-shadow: 0 1px 3px rgba(124, 95, 174, 0.18);
+}
+
 .actions {
   grid-column: 1 / -1;
   display: flex;
@@ -309,6 +340,18 @@ body {
 }
 .empty h3 { font-family: var(--font-display); font-weight: 600; font-size: 19px; margin: 0 0 8px; }
 .empty p { color: var(--muted); margin: 0; line-height: 1.6; }
+.empty-hint { margin-top: 10px !important; }
+.link-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--lavender-ink);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.link-btn:hover { color: var(--pink-ink); }
 .empty code {
   background: var(--panel-2);
   padding: 1px 6px;
@@ -503,6 +546,49 @@ body {
 }
 .cz-share-hint.ok { color: #2e9e6b; font-weight: 700; }
 .cz-share-hint.err { color: #d9534f; font-weight: 700; }
+
+/* Series group — a super-header above one series' worth of blocks */
+.cz-series-group { margin-bottom: 30px; }
+.cz-series-group + .cz-series-group { margin-top: 34px; }
+.cz-series-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 4px 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.cz-series-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cz-series-head h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--lavender-ink);
+}
+.cz-series-sub {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--pink-ink);
+  background: var(--panel-2);
+  border-radius: 999px;
+  padding: 3px 11px;
+}
+.cz-series-count {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+}
 
 /* Themed block — one per scansheet section, washed with its accent color */
 .cz-block {

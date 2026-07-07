@@ -139,7 +139,8 @@
         "YH2185",
         "YH2695",
         "YH1565",
-        "YH1765"
+        "YH1765",
+        "YH3205"
       ],
       "series": "Series 1",
       "weight": ""
@@ -163,24 +164,6 @@
         "patchy:>"
       ],
       "visibleRaw": "patchy:>",
-      "hidden": "ChocoxPuddin",
-      "rarity": "Common",
-      "type": "2-Pack",
-      "batchCodes": [
-        "YH1125",
-        "YH1155",
-        "YH2185",
-        "YH1505"
-      ],
-      "series": "Series 1",
-      "weight": ""
-    },
-    {
-      "id": 11,
-      "visible": [
-        "patchy:>"
-      ],
-      "visibleRaw": "patchy:>",
       "hidden": "DREAMYY~",
       "rarity": "Common",
       "type": "2-Pack",
@@ -192,7 +175,7 @@
       "weight": ""
     },
     {
-      "id": 12,
+      "id": 11,
       "visible": [
         "~Meowch!~"
       ],
@@ -213,7 +196,7 @@
       "weight": "39.92-40.39 Grams"
     },
     {
-      "id": 13,
+      "id": 12,
       "visible": [
         "~Meowch!~"
       ],
@@ -224,13 +207,14 @@
       "batchCodes": [
         "YH1125",
         "YH1765",
-        "YH2185"
+        "YH2185",
+        "YH3205"
       ],
       "series": "Series 1",
       "weight": ""
     },
     {
-      "id": 14,
+      "id": 13,
       "visible": [
         "Mshrm_Deer"
       ],
@@ -247,7 +231,7 @@
       "weight": "40.44 Grams"
     },
     {
-      "id": 15,
+      "id": 14,
       "visible": [
         "Mshrm_Deer"
       ],
@@ -265,21 +249,22 @@
       "weight": ""
     },
     {
-      "id": 16,
+      "id": 15,
       "visible": [
-        "Mshrm_Deer (not entirely confirmed",
-        "but only one that matches)"
+        "Mshrm_Deer"
       ],
-      "visibleRaw": "Mshrm_Deer (not entirely confirmed, but only one that matches)",
+      "visibleRaw": "Mshrm_Deer",
       "hidden": "The_Lucky_Bunny",
       "rarity": "Limited Edition",
       "type": "2-Pack",
-      "batchCodes": [],
+      "batchCodes": [
+        "YH2185"
+      ],
       "series": "Series 1",
-      "weight": ""
+      "weight": "44-45 Grams"
     },
     {
-      "id": 17,
+      "id": 16,
       "visible": [
         "StrwBryBear"
       ],
@@ -297,7 +282,7 @@
       "weight": "40.56 Grams"
     },
     {
-      "id": 18,
+      "id": 17,
       "visible": [
         "StrwBryBear"
       ],
@@ -315,7 +300,7 @@
       "weight": ""
     },
     {
-      "id": 19,
+      "id": 18,
       "visible": [
         "Swirlybunny"
       ],
@@ -335,7 +320,7 @@
       "weight": ""
     },
     {
-      "id": 20,
+      "id": 19,
       "visible": [
         "Swirlybunny"
       ],
@@ -353,7 +338,7 @@
       "weight": ""
     },
     {
-      "id": 21,
+      "id": 20,
       "visible": [
         "SUPAR-STAR"
       ],
@@ -369,7 +354,7 @@
       "weight": ""
     },
     {
-      "id": 22,
+      "id": 21,
       "visible": [
         "SUPAR-STAR"
       ],
@@ -386,7 +371,7 @@
       "weight": ""
     },
     {
-      "id": 23,
+      "id": 22,
       "visible": [
         "xCHOCO_dip"
       ],
@@ -404,7 +389,7 @@
       "weight": "40.33 Grams"
     },
     {
-      "id": 24,
+      "id": 23,
       "visible": [
         "xCHOCO_dip"
       ],
@@ -419,7 +404,7 @@
       "weight": ""
     },
     {
-      "id": 25,
+      "id": 24,
       "visible": [
         "Star_STRUCK"
       ],
@@ -438,7 +423,7 @@
       "weight": "40.77 Grams"
     },
     {
-      "id": 26,
+      "id": 25,
       "visible": [
         "Star_STRUCK"
       ],
@@ -455,7 +440,7 @@
       "weight": ""
     },
     {
-      "id": 27,
+      "id": 26,
       "visible": [
         "Unknown what was the Visible one."
       ],
@@ -470,7 +455,7 @@
       "weight": ""
     },
     {
-      "id": 28,
+      "id": 27,
       "visible": [
         "beau.x",
         "STRAW_BERRY",
@@ -490,7 +475,7 @@
       "weight": "77.05 Grams"
     },
     {
-      "id": 29,
+      "id": 28,
       "visible": [
         "beau.x",
         "STRAW_BERRY",
@@ -508,7 +493,7 @@
       "weight": ""
     },
     {
-      "id": 30,
+      "id": 29,
       "visible": [
         "BerryWafflz",
         "Flowacrown",
@@ -523,7 +508,7 @@
       "weight": ""
     },
     {
-      "id": 31,
+      "id": 30,
       "visible": [
         "butterflyx",
         "angel.eyes",
@@ -540,7 +525,7 @@
       "weight": ""
     },
     {
-      "id": 32,
+      "id": 31,
       "visible": [
         "PetalPowerz",
         "Flowacrown",
@@ -555,7 +540,7 @@
       "weight": ""
     },
     {
-      "id": 33,
+      "id": 32,
       "visible": [
         "PetalPowerz",
         "Flowacrown",
@@ -570,7 +555,7 @@
       "weight": ""
     },
     {
-      "id": 34,
+      "id": 33,
       "visible": [
         "IAMGreenDog",
         "goth.qt",
@@ -590,7 +575,7 @@
       "weight": ""
     },
     {
-      "id": 35,
+      "id": 34,
       "visible": [
         "PrissyRose1",
         "Invasion!!",
@@ -610,7 +595,7 @@
       "weight": ""
     },
     {
-      "id": 36,
+      "id": 35,
       "visible": [
         "PrissyRose1",
         "Invasion!!",
@@ -628,7 +613,7 @@
       "weight": ""
     },
     {
-      "id": 37,
+      "id": 36,
       "visible": [
         "StrwbrrSWIRL",
         "rainz",
@@ -648,7 +633,7 @@
       "weight": ""
     },
     {
-      "id": 38,
+      "id": 37,
       "visible": [
         "StrwbrrSWIRL",
         "rainz",
@@ -663,7 +648,7 @@
       "weight": ""
     },
     {
-      "id": 39,
+      "id": 38,
       "visible": [
         "StrwbrrSWIRL",
         "rainz",
@@ -682,7 +667,7 @@
       "weight": ""
     },
     {
-      "id": 40,
+      "id": 39,
       "visible": [
         "YUMMYberry!",
         "goth.qt",
@@ -699,7 +684,7 @@
       "weight": ""
     },
     {
-      "id": 41,
+      "id": 40,
       "visible": [
         "x.Twilight.x",
         "Flowacrown",
@@ -716,7 +701,7 @@
       "weight": ""
     },
     {
-      "id": 42,
+      "id": 41,
       "visible": [
         "x.Twilight.x",
         "Flowacrown",
@@ -735,7 +720,7 @@
       "weight": "77.74 Grams"
     },
     {
-      "id": 43,
+      "id": 42,
       "visible": [
         "*StarExplorer*",
         "Berry",
@@ -752,7 +737,7 @@
       "weight": ""
     },
     {
-      "id": 44,
+      "id": 43,
       "visible": [
         "*StarExplorer*",
         "Berry",
@@ -774,7 +759,7 @@
       "weight": ""
     },
     {
-      "id": 45,
+      "id": 44,
       "visible": [
         "*StarExplorer*",
         "Berry",
@@ -795,7 +780,7 @@
       "weight": ""
     },
     {
-      "id": 46,
+      "id": 45,
       "visible": [
         "NIGHTLIGHT",
         "Saturnz",
@@ -812,7 +797,7 @@
       "weight": ""
     },
     {
-      "id": 47,
+      "id": 46,
       "visible": [
         "NIGHTLIGHT",
         "Saturnz",
@@ -833,7 +818,7 @@
       "weight": ""
     },
     {
-      "id": 48,
+      "id": 47,
       "visible": [
         "NIGHTLIGHT",
         "Saturnz",
@@ -850,7 +835,7 @@
       "weight": ""
     },
     {
-      "id": 49,
+      "id": 48,
       "visible": [
         "NIGHTLIGHT",
         "Saturnz",
@@ -870,7 +855,7 @@
       "weight": ""
     },
     {
-      "id": 50,
+      "id": 49,
       "visible": [
         "~Meowch!~",
         "xCHOCO_dip",
@@ -888,7 +873,7 @@
       "weight": ""
     },
     {
-      "id": 51,
+      "id": 50,
       "visible": [
         "Purplepupxx",
         "Star_STRUCK",
@@ -907,7 +892,7 @@
       "weight": ""
     },
     {
-      "id": 52,
+      "id": 51,
       "visible": [
         "N/A"
       ],
@@ -920,7 +905,7 @@
       "weight": ""
     },
     {
-      "id": 53,
+      "id": 52,
       "visible": [
         "N/A"
       ],
@@ -933,7 +918,7 @@
       "weight": ""
     },
     {
-      "id": 54,
+      "id": 53,
       "visible": [
         "berry<3banana"
       ],
@@ -948,7 +933,7 @@
       "weight": ""
     },
     {
-      "id": 55,
+      "id": 54,
       "visible": [
         "berry<3banana"
       ],
@@ -963,7 +948,7 @@
       "weight": ""
     },
     {
-      "id": 56,
+      "id": 55,
       "visible": [
         "IAmBlueDog"
       ],
@@ -978,7 +963,7 @@
       "weight": ""
     },
     {
-      "id": 57,
+      "id": 56,
       "visible": [
         "IAmBlueDog"
       ],
@@ -993,7 +978,7 @@
       "weight": ""
     },
     {
-      "id": 58,
+      "id": 57,
       "visible": [
         "mermy<3"
       ],
@@ -1008,7 +993,7 @@
       "weight": ""
     },
     {
-      "id": 59,
+      "id": 58,
       "visible": [
         "mermy<3"
       ],
@@ -1021,7 +1006,7 @@
       "weight": ""
     },
     {
-      "id": 60,
+      "id": 59,
       "visible": [
         "Multi.Fruity"
       ],
@@ -1036,7 +1021,7 @@
       "weight": ""
     },
     {
-      "id": 61,
+      "id": 60,
       "visible": [
         "Multi.Fruity"
       ],
@@ -1049,7 +1034,7 @@
       "weight": ""
     },
     {
-      "id": 62,
+      "id": 61,
       "visible": [
         "princess.x"
       ],
@@ -1064,7 +1049,7 @@
       "weight": ""
     },
     {
-      "id": 63,
+      "id": 62,
       "visible": [
         "princess.x"
       ],
@@ -1079,7 +1064,7 @@
       "weight": ""
     },
     {
-      "id": 64,
+      "id": 63,
       "visible": [
         "SPLASH!"
       ],
@@ -1094,7 +1079,7 @@
       "weight": ""
     },
     {
-      "id": 65,
+      "id": 64,
       "visible": [
         "SPLASH!"
       ],
@@ -1103,13 +1088,14 @@
       "rarity": "Common",
       "type": "2-Pack",
       "batchCodes": [
-        "YH2905"
+        "YH2905",
+        "YH3005"
       ],
       "series": "Series 2",
       "weight": ""
     },
     {
-      "id": 66,
+      "id": 65,
       "visible": [
         "kiwheeeee",
         "squeeze^.^",
@@ -1119,12 +1105,14 @@
       "hidden": "LookingFresh! and .:SANDY:.",
       "rarity": "Common",
       "type": "5-Pack",
-      "batchCodes": [],
+      "batchCodes": [
+        "YH3005"
+      ],
       "series": "Series 2",
       "weight": ""
     },
     {
-      "id": 67,
+      "id": 66,
       "visible": [
         "kiwheeeee",
         "squeeze^.^",
@@ -1141,7 +1129,7 @@
       "weight": ""
     },
     {
-      "id": 68,
+      "id": 67,
       "visible": [
         "x.raspy.x",
         "goinbananas",
@@ -1154,6 +1142,21 @@
       "batchCodes": [
         "YH3205"
       ],
+      "series": "Series 2",
+      "weight": ""
+    },
+    {
+      "id": 68,
+      "visible": [
+        "x.raspy.x",
+        "goinbananas",
+        "Ahoymatey!"
+      ],
+      "visibleRaw": "x.raspy.x, goinbananas, Ahoymatey!",
+      "hidden": "The_Pearly_Deer and groovySmoothie",
+      "rarity": "Limited Edition",
+      "type": "5-Pack",
+      "batchCodes": [],
       "series": "Series 2",
       "weight": ""
     },
@@ -1186,39 +1189,735 @@
       "batchCodes": [],
       "series": "Series 2",
       "weight": ""
+    },
+    {
+      "id": 71,
+      "visible": [
+        "berry.milky"
+      ],
+      "visibleRaw": "berry.milky",
+      "hidden": "forestberry",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 72,
+      "visible": [
+        "berry.milky"
+      ],
+      "visibleRaw": "berry.milky",
+      "hidden": "Twinkle!",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 73,
+      "visible": [
+        "mooOOOse"
+      ],
+      "visibleRaw": "mooOOOse",
+      "hidden": "magic_LEGEND",
+      "rarity": "Legendary/Ultra Rare",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse",
+        "YH0796"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 74,
+      "visible": [
+        "mooOOOse"
+      ],
+      "visibleRaw": "mooOOOse",
+      "hidden": "forestberry",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse",
+        "YH0796"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 75,
+      "visible": [
+        "Top-Tier"
+      ],
+      "visibleRaw": "Top-Tier",
+      "hidden": "Shine!",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 76,
+      "visible": [
+        "Top-Tier"
+      ],
+      "visibleRaw": "Top-Tier",
+      "hidden": "sweetie-roll",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 77,
+      "visible": [
+        "D33RY"
+      ],
+      "visibleRaw": "D33RY",
+      "hidden": "just-a-gorl:p",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 78,
+      "visible": [
+        "D33RY"
+      ],
+      "visibleRaw": "D33RY",
+      "hidden": "sweetie-roll",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse",
+        "YH0796"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 79,
+      "visible": [
+        "SW~RLY"
+      ],
+      "visibleRaw": "SW~RLY",
+      "hidden": "FAUNA",
+      "rarity": "Epic/Rare",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 80,
+      "visible": [
+        "SW~RLY"
+      ],
+      "visibleRaw": "SW~RLY",
+      "hidden": "munch-oui",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse",
+        "YH0796"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 81,
+      "visible": [
+        "MushMouse"
+      ],
+      "visibleRaw": "MushMouse",
+      "hidden": "*conjure*",
+      "rarity": "Epic/Rare",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 82,
+      "visible": [
+        "MushMouse"
+      ],
+      "visibleRaw": "MushMouse",
+      "hidden": "Girly-POP!",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse",
+        "YH0796"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 83,
+      "visible": [
+        "Twinkle!"
+      ],
+      "visibleRaw": "Twinkle!",
+      "hidden": "Annie.x",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 84,
+      "visible": [
+        "*milky*sl4y*"
+      ],
+      "visibleRaw": "*milky*sl4y*",
+      "hidden": "!Mossy",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse",
+        "YH0796"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 85,
+      "visible": [
+        "*milky*sl4y*"
+      ],
+      "visibleRaw": "*milky*sl4y*",
+      "hidden": "bakery_LEGEND",
+      "rarity": "Legendary/Ultra Rare",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 86,
+      "visible": [
+        "its_givin_OwO"
+      ],
+      "visibleRaw": "its_givin_OwO",
+      "hidden": "on~a~roll",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 87,
+      "visible": [
+        "its_givin_OwO"
+      ],
+      "visibleRaw": "its_givin_OwO",
+      "hidden": "!Mossy",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse",
+        "YH0796"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 88,
+      "visible": [
+        ".o*.GLIMMER.*o."
+      ],
+      "visibleRaw": ".o*.GLIMMER.*o.",
+      "hidden": "on~a~roll",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 89,
+      "visible": [
+        ".o*.GLIMMER.*o."
+      ],
+      "visibleRaw": ".o*.GLIMMER.*o.",
+      "hidden": "Shine!",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse",
+        "YH0796"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 90,
+      "visible": [
+        "Tadaaaa!!"
+      ],
+      "visibleRaw": "Tadaaaa!!",
+      "hidden": "Girly-POP!",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 91,
+      "visible": [
+        "Tadaaaa!!"
+      ],
+      "visibleRaw": "Tadaaaa!!",
+      "hidden": "softie",
+      "rarity": "Epic/Rare",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 92,
+      "visible": [
+        "nerdy-XOXO"
+      ],
+      "visibleRaw": "nerdy-XOXO",
+      "hidden": "munch-oui",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: IAmBlueMouse"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 93,
+      "visible": [
+        "nerdy-XOXO"
+      ],
+      "visibleRaw": "nerdy-XOXO",
+      "hidden": "~cinnyyy~",
+      "rarity": "Epic/Rare",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse",
+        "YH0796"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 94,
+      "visible": [
+        "Annie.x"
+      ],
+      "visibleRaw": "Annie.x",
+      "hidden": "acorn.<3",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [
+        "Try Me: mooOOOse",
+        "YH0796"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 95,
+      "visible": [
+        "Annie.x"
+      ],
+      "visibleRaw": "Annie.x",
+      "hidden": "Twinkle!",
+      "rarity": "Common",
+      "type": "2-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": "30.2 Grams"
+    },
+    {
+      "id": 96,
+      "visible": [
+        "Axo-Lottie",
+        "Toast-Ouioui",
+        "Sparkle!"
+      ],
+      "visibleRaw": "Axo-Lottie, Toast-Ouioui, Sparkle!",
+      "hidden": "IAmBlueMouse and just>a<baby",
+      "rarity": "Common",
+      "type": "5-Pack",
+      "batchCodes": [
+        "YH0856"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 97,
+      "visible": [
+        "Axo-Lottie",
+        "Toast-Ouioui",
+        "Sparkle!"
+      ],
+      "visibleRaw": "Axo-Lottie, Toast-Ouioui, Sparkle!",
+      "hidden": "Shine! and ~!FROGGY!~",
+      "rarity": "Common",
+      "type": "5-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 98,
+      "visible": [
+        "forestberry",
+        "W4FFLES",
+        "CASTaSPELL"
+      ],
+      "visibleRaw": "forestberry, W4FFLES, CASTaSPELL",
+      "hidden": "#cherryyy# and Squ33ky",
+      "rarity": "Epic/Rare",
+      "type": "5-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 99,
+      "visible": [
+        "forestberry",
+        "W4FFLES",
+        "CASTaSPELL"
+      ],
+      "visibleRaw": "forestberry, W4FFLES, CASTaSPELL",
+      "hidden": "#cherryyy# and C00kieeeee-",
+      "rarity": "Epic/Rare",
+      "type": "5-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 100,
+      "visible": [
+        "Squ33Ky",
+        "BirthYAY<3",
+        "F0XY"
+      ],
+      "visibleRaw": "Squ33Ky, BirthYAY<3, F0XY",
+      "hidden": "pink_LEGEND and Twinkle!",
+      "rarity": "Legendary/Ultra Rare",
+      "type": "5-Pack",
+      "batchCodes": [
+        "YH0856"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 101,
+      "visible": [
+        "Squ33Ky",
+        "BirthYAY<3",
+        "F0XY"
+      ],
+      "visibleRaw": "Squ33Ky, BirthYAY<3, F0XY",
+      "hidden": "MushMouse and nerdy-XOXO",
+      "rarity": "Common",
+      "type": "5-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 102,
+      "visible": [
+        "Gr00vy",
+        "Lily.paddily",
+        "Crystal.x"
+      ],
+      "visibleRaw": "Gr00vy, Lily.paddily, Crystal.x",
+      "hidden": "Toast-Ouioui and C00kieeeee-",
+      "rarity": "Common",
+      "type": "5-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 103,
+      "visible": [
+        "Gr00vy",
+        "Lily.paddily",
+        "Crystal.x"
+      ],
+      "visibleRaw": "Gr00vy, Lily.paddily, Crystal.x",
+      "hidden": "Girly-POP! and *enchanting*",
+      "rarity": "Epic/Rare",
+      "type": "5-Pack",
+      "batchCodes": [
+        "YH0856"
+      ],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 104,
+      "visible": [
+        "..jammy.cowkie..",
+        "/Pretty/Preppy/",
+        "ABRACADABRA!"
+      ],
+      "visibleRaw": "..jammy.cowkie.., /Pretty/Preppy/, ABRACADABRA!",
+      "hidden": "acorn.<3 and FLORA",
+      "rarity": "Epic/Rare",
+      "type": "5-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 105,
+      "visible": [
+        "cherry.on.top",
+        "IAmBlueMouse",
+        "~!FROGGY!~",
+        "its_givin_OwO",
+        "!Mossy",
+        "cutie~puff",
+        "YAPPY123"
+      ],
+      "visibleRaw": "cherry.on.top, IAmBlueMouse, ~!FROGGY!~, its_givin_OwO, !Mossy, cutie~puff, YAPPY123",
+      "hidden": "-.CHARM.-, Ballerina<3, FLOWA-POWAR, *fluffyyy*, sweetie-roll",
+      "rarity": "Epic/Rare",
+      "type": "12-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 106,
+      "visible": [
+        "cherry.on.top",
+        "IAmBlueMouse",
+        "~!FROGGY!~",
+        "its_givin_OwO",
+        "!Mossy",
+        "cutie~puff",
+        "YAPPY123"
+      ],
+      "visibleRaw": "cherry.on.top, IAmBlueMouse, ~!FROGGY!~, its_givin_OwO, !Mossy, cutie~puff, YAPPY123",
+      "hidden": "Cake-POP!!, acorn.<3, Sparkle!, Toast-Ouioui, DIVA!",
+      "rarity": "Epic/Rare",
+      "type": "12-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 107,
+      "visible": [
+        "W4FFLES",
+        "*Bubbles*",
+        "just>a<baby",
+        "berry.milky",
+        "Crystal.x",
+        "ABRACADABRA!",
+        "some.grass"
+      ],
+      "visibleRaw": "W4FFLES, *Bubbles*, just>a<baby, berry.milky, Crystal.x, ABRACADABRA!, some.grass",
+      "hidden": "Cake-POP!!, ..jammy.cowkie.., nerdy-XOXO, Sparkle!, FLY",
+      "rarity": "Epic/Rare",
+      "type": "12-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 108,
+      "visible": [
+        "W4FFLES",
+        "*Bubbles*",
+        "just>a<baby",
+        "berry.milky",
+        "Crystal.x",
+        "ABRACADABRA!",
+        "some.grass"
+      ],
+      "visibleRaw": "W4FFLES, *Bubbles*, just>a<baby, berry.milky, Crystal.x, ABRACADABRA!, some.grass",
+      "hidden": "*familiar*, Lily.paddily, forest_LEGEND, mooOOOse, -.CHARM.-",
+      "rarity": "Legendary/Ultra Rare",
+      "type": "12-Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": ""
+    },
+    {
+      "id": 109,
+      "visible": [
+        "sweetie-roll",
+        "#cherryyy#",
+        "Lily-paddily"
+      ],
+      "visibleRaw": "sweetie-roll, #cherryyy#, Lily-paddily",
+      "hidden": "GirlBoss, Girly-POP!, Squ33ky, forestberry, mooOOOse",
+      "rarity": "Epic/Rare",
+      "type": "Keyboard Starter Pack",
+      "batchCodes": [
+        "YH0856",
+        "YH1206"
+      ],
+      "series": "Series 3",
+      "weight": "618.4-623.1 Grams"
+    },
+    {
+      "id": 110,
+      "visible": [
+        "sweetie-roll",
+        "#cherryyy#",
+        "Lily-paddily"
+      ],
+      "visibleRaw": "sweetie-roll, #cherryyy#, Lily-paddily",
+      "hidden": "just>a<baby, Cake-POP!!, acorn.<3, CASTaSPELL, GirlBoss",
+      "rarity": "Epic/Rare",
+      "type": "Keyboard Starter Pack",
+      "batchCodes": [
+        "YH1206"
+      ],
+      "series": "Series 3",
+      "weight": "616.7 Grams"
+    },
+    {
+      "id": 111,
+      "visible": [
+        "FAUNA",
+        "FLOWA-POWAR",
+        "IAmBlueMouse"
+      ],
+      "visibleRaw": "FAUNA, FLOWA-POWAR, IAmBlueMouse",
+      "hidden": "W4FFLES, Ballerina<3, some.grass, Twinkle!, GirlBoss",
+      "rarity": "Epic/Rare",
+      "type": "Keyboard Starter Pack",
+      "batchCodes": [],
+      "series": "Series 3",
+      "weight": "614.5 Grams"
+    },
+    {
+      "id": 112,
+      "visible": [
+        "FAUNA",
+        "FLOWA-POWAR",
+        "IAmBlueMouse"
+      ],
+      "visibleRaw": "FAUNA, FLOWA-POWAR, IAmBlueMouse",
+      "hidden": "YAPPY123, SW~RLY, ~!FROGGY!~, Tadaaa!!, GirlBoss",
+      "rarity": "Epic/Rare",
+      "type": "Keyboard Starter Pack",
+      "batchCodes": [
+        "YH1206"
+      ],
+      "series": "",
+      "weight": "616.5 Grams"
     }
   ],
   "visibles": [
+    "!Mossy",
+    "..jammy.cowkie..",
+    ".o*.GLIMMER.*o.",
+    "*Bubbles*",
+    "*milky*sl4y*",
     "*SeaPuppy**",
     "*StarExplorer*",
+    "/Pretty/Preppy/",
+    "#cherryyy#",
+    "~!FROGGY!~",
     "~Meowch!~",
+    "ABRACADABRA!",
     "Ahoymatey!",
     "angel.eyes",
+    "Annie.x",
+    "Axo-Lottie",
     "beau.x",
     "Berry",
+    "berry.milky",
     "berry<3banana",
     "BerryWafflz",
+    "BirthYAY<3",
     "BubblyBear!",
     "BumbleKitty",
     "bun^-^",
-    "but only one that matches)",
     "butterflyx",
+    "CASTaSPELL",
+    "cherry.on.top",
     "COSMOS",
+    "Crystal.x",
+    "cutie~puff",
+    "D33RY",
     "Estella",
+    "F0XY",
     "Falling_Stars",
+    "FAUNA",
+    "FLOWA-POWAR",
     "Flowacrown",
+    "forestberry",
     "Fruity-Fusion!",
     "goinbananas",
     "goth.qt",
+    "Gr00vy",
     "IAmBlueDog",
+    "IAmBlueMouse",
     "IAMGreenDog",
     "Invasion!!",
+    "its_givin_OwO",
+    "just>a<baby",
     "kiwheeeee",
+    "Lily-paddily",
+    "Lily.paddily",
     "mermy<3",
+    "mooOOOse",
     "Mshrm_Deer",
-    "Mshrm_Deer (not entirely confirmed",
     "Multi.Fruity",
+    "MushMouse",
     "NeoGelato.xx",
+    "nerdy-XOXO",
     "NIGHTLIGHT",
     "NYAA~!!",
     "Oceansong~",
@@ -1231,26 +1930,42 @@
     "rainz",
     "Saturnz",
     "SillyBerry123",
+    "some.grass",
+    "Sparkle!",
     "SPLASH!",
     "Sprinkles.x",
+    "Squ33Ky",
     "squeeze^.^",
     "Star_STRUCK",
     "STRAW_BERRY",
     "StrwbrrSWIRL",
     "StrwBryBear",
     "SUPAR-STAR",
+    "SW~RLY",
+    "sweetie-roll",
     "Swirlybunny",
+    "Tadaaaa!!",
+    "Toast-Ouioui",
+    "Top-Tier",
+    "Twinkle!",
+    "W4FFLES",
     "x.Night",
     "x.raspy.x",
     "x.Twilight.x",
     "xCHOCO_dip",
     "xlunar_sky",
+    "YAPPY123",
     "YUMMYberry!"
   ],
   "batches": [
+    "Try Me: IAmBlueMouse",
+    "Try Me: mooOOOse",
     "YH0725",
+    "YH0796",
+    "YH0856",
     "YH1125",
     "YH1155",
+    "YH1206",
     "YH1265",
     "YH1505",
     "YH1565",

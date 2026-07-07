@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SECTIONS } from './sections';
+import { SERIES } from './sections';
 import { imageFor } from './images';
 import { useOwnedCollection } from './useOwnedCollection';
 
@@ -18,7 +18,7 @@ function CheckCell({ name, owned, onToggle }) {
         {image ? (
           <img src={image.url} alt={name} loading="lazy" />
         ) : (
-          <span className="cell-face-missing" title="No image (Series 2)">?</span>
+          <span className="cell-face-missing" title="No image yet">?</span>
         )}
       </span>
       <span className="cell-name">{name}</span>
@@ -42,6 +42,27 @@ function Section({ section, isOwned, onToggle }) {
         ))}
       </div>
     </section>
+  );
+}
+
+function SeriesGroup({ series, isOwned, onToggle }) {
+  const members = series.sections.flatMap((s) => s.members);
+  const ownedCount = members.filter(isOwned).length;
+  return (
+    <div className="cz-series-group">
+      <header className="cz-series-head">
+        <div className="cz-series-heading">
+          <h2>{series.name}</h2>
+          {series.subtitle && <span className="cz-series-sub">{series.subtitle}</span>}
+        </div>
+        <span className="cz-series-count">
+          {ownedCount} / {members.length}
+        </span>
+      </header>
+      {series.sections.map((section) => (
+        <Section key={section.name} section={section} isOwned={isOwned} onToggle={onToggle} />
+      ))}
+    </div>
   );
 }
 
@@ -88,7 +109,7 @@ export default function CollectionView() {
     <div className="collection">
       <div className="cz-banner">
         <div className="cz-banner-top">
-          <span className="cz-series">Series 1</span>
+          <span className="cz-series">Series 1 &amp; 3</span>
           <span className="cz-title">Collector&apos;s Checklist</span>
         </div>
         <div className="cz-counter">
@@ -149,8 +170,8 @@ export default function CollectionView() {
         )}
       </div>
 
-      {SECTIONS.map((section) => (
-        <Section key={section.name} section={section} isOwned={isOwned} onToggle={toggle} />
+      {SERIES.map((series) => (
+        <SeriesGroup key={series.id} series={series} isOwned={isOwned} onToggle={toggle} />
       ))}
 
       <p className="cz-foot">
